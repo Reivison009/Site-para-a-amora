@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Mali 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(180deg, #ffe6f0, #fff);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.8em;
+      color: #ff69b4;
+      margin-top: 30px;
+    }
+
+    .mensagem, .contador {
+      background: #fff0f6;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .coração {
+      font-size: 2em;
+      color: #ff69b4;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #999;
+    }
+
+    img.foto {
+      max-width: 150px;
+      border-radius: 50%;
+      margin-top: 15px;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Oi, Mali! 💕</h1>
+
+  <img src="https://cdn.discordapp.com/attachments/1155655763549753407/1395599246413271091/mali.jpg?ex=687b0895&is=6879b715&hm=da99a4c35c99f9ed85b462e68a4e5e25c3976550bfe40c5a7634be054334b656&" alt="Foto fofa" class="foto" />
+
+  <!-- Música de fundo -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_d1963959d8.mp3?filename=sweet-clarity-14472.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Contadores -->
+  <div class="contador" id="diasConhecidos">Calculando... 🕒</div>
+  <div class="contador" id="diasMelhoresAmigos">Calculando... 💫</div>
+
+  <!-- Mensagens -->
+  <div class="mensagem">
+    Você é uma amiga incrível e muito especial pra mim.  
+    Obrigado por estar sempre do meu lado, por me ouvir e por ser essa pessoa maravilhosa. 💗  
+    <br><br>
+    Esse site é só uma forma fofa de dizer:  
+    <strong>Você é importante pra mim!</strong>
+  </div>
+
+  <div class="mensagem">
+    Sempre que estiver triste, lembra que alguém do seu lado te admira de verdade.  
+    Você merece sorrisos, abraços e momentos lindos todos os dias! ✨
+  </div>
+
+  <div class="mensagem">
+    Te desejo tudo de bom, hoje e sempre. <br>
+    Você é luz, Mali 🌸
+  </div>
+
+  <div class="coração">💗</div>
+
+  <footer>
+    Feito com carinho por quem sempre vai torcer por você 💞
+  </footer>
+
+  <!-- Script dos contadores -->
+  <script>
+    const hoje = new Date();
+
+    // Data em que se conheceram
+    const dataConhecimento = new Date("2025-07-09");
+    const diasConhecidos = Math.floor((hoje - dataConhecimento) / (1000 * 60 * 60 * 24));
+    document.getElementById("diasConhecidos").innerHTML = 
+      `Já se passaram <strong>${diasConhecidos} dias</strong> desde que a gente se conheceu! 🥹💖`;
+
+    // Data em que viraram melhores amigos
+    const dataMelhorAmizade = new Date("2025-07-10");
+    const diasMelhoresAmigos = Math.floor((hoje - dataMelhorAmizade) / (1000 * 60 * 60 * 24));
+    document.getElementById("diasMelhoresAmigos").innerHTML = 
+      `E faz <strong>${diasMelhoresAmigos} dias</strong> que você virou minha melhor amiga! 🫂💞`;
+  </script>
+
+</body>
+</html>
