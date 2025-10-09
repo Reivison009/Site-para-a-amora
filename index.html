@@ -1,215 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charadinha 💖</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amora 💕 — Você é muito especial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(-45deg, #ffdde1, #ee9ca7, #fcb69f, #ffb6c1);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #ffe4ec, #ffd6f3, #fff0f7);
+      color: #4b2a52;
       display: flex;
-      justify-content: center;
       align-items: center;
-      flex-direction: column;
+      justify-content: center;
       min-height: 100vh;
-      overflow: hidden;
       text-align: center;
-    }
-
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      color: #fff;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-    }
-
-    p {
-      font-size: 1.3rem;
-      color: #fff;
-      margin: 10px 0;
-    }
-
-    .quiz {
-      margin-top: 30px;
-      background: rgba(255, 255, 255, 0.2);
-      padding: 25px;
-      border-radius: 25px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.4);
-      backdrop-filter: blur(6px);
-      animation: float 4s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-    }
-
-    input {
-      padding: 12px;
-      border-radius: 12px;
-      border: none;
-      font-size: 1rem;
-      outline: none;
-      margin-top: 10px;
-      width: 80%;
-      text-align: center;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    .button {
-      margin-top: 15px;
-      padding: 12px 30px;
-      background: linear-gradient(45deg, #ff4d79, #ff85a1, #ff4d79);
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0px 0px 15px rgba(255, 77, 121, 0.8);
-      background-size: 200% 200%;
-      animation: shine 3s linear infinite;
-    }
-
-    @keyframes shine {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .button:hover {
-      transform: scale(1.12);
-    }
-
-    #quiz-result {
-      margin-top: 15px;
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: #fff;
-      display: none;
-    }
-
-    /* Animação de digitação */
-    .typing {
-      border-right: 3px solid #fff;
-      white-space: nowrap;
       overflow: hidden;
-      animation: typing 2s steps(30, end), blink 0.7s infinite;
-    }
+    }.card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  padding: 50px 35px;
+  border-radius: 28px;
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+  max-width: 600px;
+  animation: fadeIn 2s ease-in-out;
+  position: relative;
+}
 
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
+h1 {
+  font-size: 38px;
+  margin-bottom: 18px;
+  color: #ff69b4;
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+}
 
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #5e3a60;
+}
 
-    /* Corações animados */
-    .heart {
-      position: absolute;
-      font-size: 22px;
-      color: #ff4d79;
-      animation: float 6s infinite;
-      opacity: 0.8;
-    }
+.heart {
+  font-size: 60px;
+  margin-top: 25px;
+  animation: pulse 1.5s infinite;
+}
 
-    /* Brilhos animados */
-    .sparkle {
-      position: absolute;
-      font-size: 18px;
-      color: #fff;
-      animation: sparkle 4s infinite;
-      opacity: 0.8;
-    }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
 
-    @keyframes sparkle {
-      0%, 100% { transform: scale(0.5) rotate(0deg); opacity: 0; }
-      50% { transform: scale(1.5) rotate(180deg); opacity: 1; }
-    }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #ffb6c1;
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1); opacity: 0.8; }
+  50% { transform: translateY(-60px) scale(1.3); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 0.8; }
+}
+
   </style>
 </head>
 <body>
-  <h1>🔮 Charadinha do Melhor Amigo 💕</h1>
-  <p>Quem é seu melhor amigo? 💭</p>
-
-  <div class="quiz">
-    <input type="text" id="answer" placeholder="Digite o nome...">
-    <br>
-    <button class="button" onclick="checkAnswer()">Responder</button>
-    <div id="quiz-result"></div>
-  </div>
-
-  <script>
-    function checkAnswer() {
-      const answer = document.getElementById("answer").value.trim().toLowerCase();
-      const result = document.getElementById("quiz-result");
-      result.style.display = "block";
-
-      let response = "🤔 Oxi... quem é ele(a) mali????";
-      if (answer === "reivison") {
-        response = "💖 TAMBÉM TE AMO!! 💖";
-      } else if (answer === "ryan") {
-        response = "😒 Poderia ser eu...";
-      } else if (answer === "jp") {
-        response = "😒 Vou falar nada...";
-      } else if (answer === "trach") {
-        response = "🤨 Você tá de sacanagem né?";
-      } else if (answer === "clara") {
-        response = "🙄 Por que não pode ser eu?";
-      } else if (answer === "moon" || answer === "moonlight") {
-        response = "🌙💖 TAMBÉM TE AMO MUITÃOZAO 💖🌙";
-      }
-
-      // Animação de digitação
-      result.innerHTML = `<span class="typing">${response}</span>`;
+  <div class="card">
+    <h1>Amora 🍓 (meu amor)</h1>
+    <p>Você é uma das pessoas mais preciosas que eu já conheci. 💖<br>
+    Sua amizade é como um abraço(vitual ta, mais se quiser pessoalmente eu aceito) quentinho nos dias frios e um raio de sol quando tudo parece nublado. 🌤️<br>
+    Eu adoro ter você por perto, ouvir sua risada e dividir momentos com você — tudo fica mais bonito quando você está aqui. 🌷</p>
+    <p>Obrigada por ser tão incrível, carinhosa e especial. Nunca se esqueça do quanto você é amada e importante pra mim. 💞</p>
+    <div class="heart">💗</div>
+  </div>  <script>
+    // Criar brilhinhos fofos flutuando
+    const container = document.body;
+    for(let i=0;i<15;i++){
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.left = Math.random() * 100 + 'vw';
+      sparkle.style.top = Math.random() * 100 + 'vh';
+      sparkle.style.animationDelay = Math.random() * 6 + 's';
+      container.appendChild(sparkle);
     }
-
-    // Corações animados
-    function createHeart() {
-      const heart = document.createElement("div");
-      heart.classList.add("heart");
-      heart.innerHTML = "💖";
-      heart.style.left = Math.random() * window.innerWidth + "px";
-      heart.style.animationDuration = 4 + Math.random() * 4 + "s";
-      document.body.appendChild(heart);
-
-      setTimeout(() => heart.remove(), 7000);
-    }
-    setInterval(createHeart, 900);
-
-    // Brilhos animados
-    function createSparkle() {
-      const sparkle = document.createElement("div");
-      sparkle.classList.add("sparkle");
-      sparkle.innerHTML = "✨";
-      sparkle.style.left = Math.random() * window.innerWidth + "px";
-      sparkle.style.top = Math.random() * window.innerHeight + "px";
-      sparkle.style.animationDuration = 2 + Math.random() * 3 + "s";
-      document.body.appendChild(sparkle);
-
-      setTimeout(() => sparkle.remove(), 4000);
-    }
-    setInterval(createSparkle, 1500);
-  </script>
-</body>
+  </script></body>
 </html>
